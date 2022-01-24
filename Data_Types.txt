@@ -1,0 +1,53 @@
+Data type:
+**********
+Variables can store data of different types, and different types can do different things.
+
+types data types: 
+*****************
+
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+
+Example:
+a = 5
+print(type(a))
+print(type(5.0))
+
+output:
+<class 'int'>
+<class 'float'>
+
+comments single/multi line comment:
+***********************************
+Comments can be used to explain Python code, make the code more readable and prevent execution when testing code.
+
+Single Line:
+#This is a comment
+print("Hello, World!")
+
+Multi Line:
+
+#This is a comment
+#written in
+#more than just one line
+print("Hello, World!")
+
+Docstrings:
+***********
+
+Python docstrings are the string literals that appear right after the definition of a function, method, class, or module.
+
+def square(n):
+    '''Takes in a number n, returns the square of n'''
+    return n**2
+
+print(square.__doc__)
+
+Output
+
+Takes in a number n, returns the square of n
