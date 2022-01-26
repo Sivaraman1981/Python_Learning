@@ -1,0 +1,96 @@
+----------------------------------------01/24/2022---------------------------------------------------------------------------------
+
+Data type:
+**********
+Variables can store data of different types, and different types can do different things.
+
+types data types: 
+*****************
+
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+
+Example:
+a = 5
+print(type(a))
+print(type(5.0))
+
+output:
+<class 'int'>
+<class 'float'>
+
+comments single/multi line comment:
+***********************************
+Comments can be used to explain Python code, make the code more readable and prevent execution when testing code.
+
+Single Line:
+#This is a comment
+print("Hello, World!")
+
+Multi Line:
+
+#This is a comment
+#written in
+#more than just one line
+print("Hello, World!")
+
+Docstrings:
+***********
+
+Python docstrings are the string literals that appear right after the definition of a function, method, class, or module.
+
+def square(n):
+    '''Takes in a number n, returns the square of n'''
+    return n**2
+
+print(square.__doc__)
+
+Output
+
+Takes in a number n, returns the square of n
+
+--------------------------------------01/25/2022----------------------------------------------------------------------------------------
+compiler vs interpreter
+***********************
+Interpreter translates just one statement of the program at a time into machine code. Compiler scans the entire program and translates 
+the whole of it into machine code at once. An interpreter takes very less time to analyze the source code. 
+A compiler always generates an intermediary object code
+
+python 2 and python 3:
+*********************
+Python 2 has more complicated syntax than Python 3. Python 3 has an easier syntax compared to Python 2. 
+A lot of libraries of Python 2 are not forward compatible. A lot of libraries are created in Python 3 to be strictly used with Python 3
+
+Python2:
+print “Hello world”
+>>Hello world
+Python3:
+print(“Hello world”)
+>>Hello world
+
+study in detail about print function:
+************************************
+
+The print() function prints the specified message to the screen, or other standard output device.
+
+The message can be a string, or any other object, the object will be converted into a string before written to the screen.
+
+print("Hello", "how are you?")
+print("Hello", "how are you?", sep="---")
+
+study in detail about input function:
+************************************
+
+The input() function:
+
+Use the input() function to get Python user input from keyboard
+Press the enter key after entering the value.
+The program waits for user input indefinetly, there is no timeout.
+The input function returns a string, that you can store in a variable
+Terminate with Ctrl-D (Unix) or Ctrl-Z+Return (Windows)
+
