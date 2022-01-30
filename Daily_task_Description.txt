@@ -93,4 +93,178 @@ Press the enter key after entering the value.
 The program waits for user input indefinetly, there is no timeout.
 The input function returns a string, that you can store in a variable
 Terminate with Ctrl-D (Unix) or Ctrl-Z+Return (Windows)
+--------------------------------------01/26/2022-- Holiday--------------------------------------------------------------------------------------
+--------------------------------------01/27/2022----------------------------------------------------------------------------------------
+
+study in detail about input function:
+*************************************
+
+The input() function:
+
+Use the input() function to get Python user input from keyboard
+Press the enter key after entering the value.
+The program waits for user input indefinetly, there is no timeout.
+The input function returns a string, that you can store in a variable
+Terminate with Ctrl-D (Unix) or Ctrl-Z+Return (Windows)
+
+a=float(input("enter the float value:"))
+print("The float value is:",a)
+
+Data type conversion (int to float,bool,string):
+************************************************
+
+#int to Floor conversion
+print("Start of Interger Data type conversion")
+print("Data type conversion of Integer to Floor")
+a = 10
+b = float(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+#int to bool conversion
+print("Data type conversion of Integer to Boolean")
+a = 10
+b = bool(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+#int to str conversion
+print("Data type conversion of Integer to String")
+a = 10
+a = str(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+print("End of Interger Data type conversion")
+
+#floor to int conversion
+print("Start of Floor Data type conversion")
+print("Data type conversion of Floor to Integer")
+a = 10.5
+b = int(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+#floor to bool conversion
+print("Data type conversion of Floor to Boolean")
+a = 10.5
+b = bool(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+#floor to str conversion
+print("Data type conversion of Floor to String")
+a = 10.5
+b = str(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+print("End of Floor Data type conversion")
+#str to int conversion
+print("Start of String Data type conversion")
+print("Data type conversion of String to Integer")
+a = 'python'
+#b = int(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print("Getting error of data type conversion String to Integer")
+#str to bool conversion
+print("Data type conversion of String to Boolean")
+a = 'python'
+b = bool(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+#str to floor conversion
+print("Data type conversion of String to float")
+a = 'python'
+#b = float(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print("Getting error of data type conversion String to floor")
+print("End of String Data type conversion")
+
+#boolean to int conversion
+print("Start of Boolean Data type conversion")
+print("Data type conversion of Boolean to Integer")
+a = True
+b = int(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+#str to bool conversion
+print("Data type conversion of Boolean to String")
+a = True
+b = str(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+
+#str to floor conversion
+print("Data type conversion of Boolean to float")
+a = True
+b = float(a)
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print("Getting error of data type conversion String to floor")
+print("End of String Data type conversion")
+
+
+--------------------------------------01/28/2022----------------------------------------------------------------------------------------
+
+Data type conversion (int to float,bool,string)
+
+For below programs collect input from user, pi is constant value 3.14 (print output in formatted way)
+
+#write a program to calculate perimeter of the circle with radius 10.2
+
+perimeter=3.14
+radius=10.2
+print("Value of the Perimeter is: ",perimeter)
+print("Value of the Radius is: ",radius)
+per_val=2*perimeter*radius
+print("The Output value of perimeter is:",per_val)
+
+#write a program to calculate area of circle with radius (float) (collect using input function)
+#write a program to calculate perimeter of the cricle with radius (float) (collect it through input function)
+
+r=float(input("Input Radius : "))
+print("The input of raduis is: ",r)
+area=3.14*r*r
+perimeter=2*3.14*r
+print("Area of Circle: ",area)
+print("Perimeter of Circle: ",perimeter)
+
+#Collect radius and height from user,calculate Area of cone (area of cone = 0.33 * pi * r * r * h) (int)
+
+perimeter=3.14
+r=float(input("Input Radius : "))
+h=float(input("Input Height : "))
+print("Value of the Perimeter is: ",perimeter)
+print("The input of raduis is: ",r)
+print("The input of Height is: ",h)
+area_of_cone=0.33 * perimeter * r * r * h)
+print("Area of Cone is: ",int(area_of_cone))
+
 
