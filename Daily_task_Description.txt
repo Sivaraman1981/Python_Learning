@@ -230,6 +230,79 @@ print(type(b))
 print("Getting error of data type conversion String to floor")
 print("End of String Data type conversion")
 
+Output:
+
+Start of Interger Data type conversion
+Data type conversion of Integer to Floor
+10
+<class 'int'>
+10.0
+<class 'float'>
+Data type conversion of Integer to Boolean
+10
+<class 'int'>
+True
+<class 'bool'>
+Data type conversion of Integer to String
+10
+<class 'str'>
+True
+<class 'bool'>
+End of Interger Data type conversion
+Start of Floor Data type conversion
+Data type conversion of Floor to Integer
+10.5
+<class 'float'>
+10
+<class 'int'>
+Data type conversion of Floor to Boolean
+10.5
+<class 'float'>
+True
+<class 'bool'>
+Data type conversion of Floor to String
+10.5
+<class 'float'>
+10.5
+<class 'str'>
+End of Floor Data type conversion
+Start of String Data type conversion
+Data type conversion of String to Integer
+python
+<class 'str'>
+10.5
+<class 'str'>
+Getting error of data type conversion String to Integer
+Data type conversion of String to Boolean
+python
+<class 'str'>
+True
+<class 'bool'>
+Data type conversion of String to float
+python
+<class 'str'>
+True
+<class 'bool'>
+Getting error of data type conversion String to floor
+End of String Data type conversion
+Start of Boolean Data type conversion
+Data type conversion of Boolean to Integer
+True
+<class 'bool'>
+1
+<class 'int'>
+Data type conversion of Boolean to String
+True
+<class 'bool'>
+True
+<class 'str'>
+Data type conversion of Boolean to float
+True
+<class 'bool'>
+1.0
+<class 'float'>
+Getting error of data type conversion String to floor
+End of String Data type conversion
 
 --------------------------------------01/28/2022----------------------------------------------------------------------------------------
 
@@ -267,4 +340,113 @@ print("The input of Height is: ",h)
 area_of_cone=0.33 * perimeter * r * r * h)
 print("Area of Cone is: ",int(area_of_cone))
 
+Output:
 
+Value of the Perimeter is:  3.14
+Value of the Radius is:  10.2
+The Output value of perimeter is: 64.056
+End of First program
+Input Radius : 2.5
+The input of raduis is:  2.5
+Area of Circle:  19.625
+Perimeter of Circle:  15.700000000000001
+End of Second program
+Input Radius : 2.5
+Input Height : 2.5
+Value of the Perimeter is:  3.14
+The input of raduis is:  2.5
+The input of Height is:  2.5
+Area of Cone is:  16
+End of Third program
+
+--------------------------------------01/31/2022----------------------------------------------------------------------------------------
+#find out the Area of Geometry
+#collect length , breadth , height from user (all of them in float datatype)
+#calculate area of geometry : (length * breadth) + (length * height) ==> int format
+#Expected output:The Area of Geometry with length {} , breadth {} and height {} is {}
+
+length=float(input("enter the float value of length:"))
+breadth=float(input("enter the float value of breath:"))
+height=float(input("enter the float value of height:"))
+
+area_of_geometry=(length*breadth)+(length*height)
+
+print("The Area of Geometry with length {} , breadth {} and height {} is {} ".format(length, breadth,height,int(area_of_geometry)))
+
+Output:
+enter the float value of length:2.5
+enter the float value of breath:2.5
+enter the float value of height:2.5
+The Area of Geometry with length 2.5 , breadth 2.5 and height 2.5 is 12 
+
+Read About string Indexing and slicing in Python:
+*************************************************
+
+Indexing: Indexing is used to obtain individual elements.
+Slicing: Slicing is used to obtain a sequence of elements.
+Indexing and Slicing can be be done in Python Sequences types like list, string, tuple, range objects.
+Indexing starts from 0. Index 0 represents the first element in the sequence.
+Negative indexing starts from -1. Index -1 represents the last element in the sequence.
+
+
+print("This is for example of indexing and slicing in python")
+a = "python" #indexing
+print(a)
+print(a[0]) #p
+print(a[3]) #h
+print(a[-1]) #n
+print(a[-4]) #t
+
+output:
+This is for example of indexing and slicing in python
+python
+p
+h
+n
+t
+
+Slicing:
+Slicing (Range Of Indexes):
+We can specify a range of indexes.
+s[i:j:k] — slice of s from i to j with step k
+
+
+s=”Python”
+print (s[1:3])
+#Output:yt
+s=”Python”
+print (s[0:3])
+#Output:Pyt
+s="Python"
+print (s[:4])
+#Output:Pyth
+s="Python"
+print (s[2:])
+#Output:thon
+s="Python"
+print (s[-2:])
+#Output:on
+s="Python"
+print (s[1:5:2])
+#Output:yh
+
+n=[0,1,2,3,4,5]
+print(n[:])
+#Output:[0, 1, 2, 3, 4, 5]
+n=[0,1,2,3,4,5]
+print(n[1:3])
+#Output:[1, 2]
+n=[0,1,2,3,4,5]
+print(n[1:])
+#Output:[1, 2, 3, 4, 5]
+n=[0,1,2,3,4,5]
+print(n[:4])
+#Output:[0, 1, 2, 3]
+n=[0,1,2,3,4,5]
+print(n[1:2])
+#Output:[1]
+print (n[1])
+#Output:1
+n=[0,1,2,3,4,5]
+print(n[1:5:2])
+#Output:[1,3]
