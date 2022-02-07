@@ -924,13 +924,13 @@ Task 8
 
 swapcase
 
-string="wELCOME tO pYTHON"
+string="PYThon"
 swapStr=string.swapcase()
 swapStr
 
 Task9
 
-what;s your name
+what's your name
 
 firstname=input("Enter your First name:")
 lastname=input("Enter your Last name:")
@@ -969,8 +969,8 @@ python divison
 
 a=int(input("a="))
 b=int(input("b="))
-intdiv=a//b
-floatdiv=a/b
-print(intdiv)
-print(floatdiv)
+idiv=a//b
+fdiv=a/b
+print(idiv)
+print(fdiv)
 
