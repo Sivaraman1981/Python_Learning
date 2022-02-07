@@ -605,3 +605,372 @@ Python String Methods:
 *********************
 Pre study: https://www.w3schools.com/python/python_ref_string.asp
 
+--------------------------------------02/04/2022----------------------------------------------------------------------------------------
+
+==============================================
+String methods Tasks Feb 4
+==============================================
+
+
+Task1:
+******
+Get one string from user
+identify the middle character of the string
+
+c = input("please enter a string: ") #string default
+print(c)
+length=len(c)
+print("Length of string is:",length)
+length1=int(len(c)/2)
+print("The middle string value is:",length1)
+print(c[length1])
+
+Output:
+
+please enter a string: python
+python
+Length of string is: 6
+The middle string value is: 3
+h
+
+please enter a string: compute
+compute
+Length of string is: 7
+The middle string value is: 3
+p
+
+Task2:
+******
+
+string1: ***python***
+string1: **python********
+string: ********python*******
+
+
+output: python  (strip,rstrip,lstrip method *)
+
+c = input("please enter a string of strip: ") 
+print(c)
+c1 = input("please enter a string of lstrip: ") 
+print(c1)
+c2 = input("please enter a string of rstrip: ") 
+print(c2)
+print("Using strip:",c.strip("*"))  
+c3=(c1.lstrip("*"))
+c4=(c3.rstrip("*"))
+print("Using lstrip:",c4)
+c5=(c2.rstrip("*"))
+c6=(c5.lstrip("*"))
+print("Using rstrip:",c6)
+
+Output:
+
+please enter a string of strip: ***python***
+***python***
+please enter a string of lstrip: **python********
+**python********
+please enter a string of rstrip: ********python*******
+********python*******
+Using strip: python
+Using lstrip: python
+Using rstrip: python
+
+Task3: (name<space>float)
+*************************
+collect three strings from user  name<space>float
+
+string1: "ravi 10.30"  
+string2: "meghala 12.19"
+string3: "Gokul 20.20"
+
+split + indexing
+
+10.30 + 12.19 + 20.20 ===> output ===> add it 42.69
+
+a = input("please enter a First string: ") #string default
+b = input("please enter a Second string: ")
+c = input("please enter a Third string: ")
+print(a)
+a1=a.split(' ')
+print(a1)
+a2=float(a1[1])
+#a1=int(a.split(' ')[1])
+print(a2)
+print(b)
+b1=b.split(' ')
+print(b1)
+b2=float(b1[1])
+print(b2)
+print(c)
+c1=c.split(' ')
+print(c1)
+c2=float(c1[1])
+print(c2)
+tot_value=(a2+b2+c2)
+print("The total value of above input value is:",tot_value)
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\3.py =========================================
+please enter a First string: ravi 10.30
+please enter a Second string: meghala 12.19
+please enter a Third string: Gokul 20.20
+ravi 10.30
+['ravi', '10.30']
+10.3
+meghala 12.19
+['meghala', '12.19']
+12.19
+Gokul 20.20
+['Gokul', '20.20']
+20.2
+The total value of above input value is: 42.69
+
+Task4:
+******
+#collect two strings from user
+
+string1: python
+String2: java
+
+output ===> jythonpava64hv
+
+string1: maths
+string2: science
+
+output ===> sathsmcience57te
+
+a = input("please enter a First string: ") #string default
+b = input("please enter a Second string: ")
+#c = input("please enter a Third string: ")
+#d = input("please enter a Fourth string: ")
+print(a)
+print(b)
+a1=a[0]
+b1=b[0]
+a2=a[1:]
+b2=b[1:]
+print(a1)
+print(b1)
+print(a2)
+print(b2)
+a1_len=len(a)
+b1_len=len(b)
+print(a1_len)
+print(b1_len)
+a3=a1_len//2
+b3=b1_len//2
+print(a3)
+print(b3)
+a4=(a[a3])
+b4=(b[b3])
+print(a4)
+print(b4)
+a1_b1_len=str(str(a1_len)+str(b1_len))
+print("The Final Output is:",str(b1+a2+a1+b2+a1_b1_len+a4+b4))
+a = input("please enter a Third string: ")
+b = input("please enter a Fourth string: ")
+print(a)
+print(b)
+a1=a[0]
+b1=b[0]
+a2=a[1:]
+b2=b[1:]
+print(a1)
+print(b1)
+print(a2)
+print(b2)
+a1_len=len(a)
+b1_len=len(b)
+print(a1_len)
+print(b1_len)
+a3=a1_len//2
+b3=b1_len//2
+print(a3)
+print(b3)
+a4=(a[a3])
+b4=(b[b3])
+print(a4)
+print(b4)
+a1_b1_len=str(str(a1_len)+str(b1_len))
+print("The Final Output is:",str(b1+a2+a1+b2+a1_b1_len+a4+b4))
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\3.py =========================================
+please enter a First string: python
+please enter a Second string: java
+python
+java
+p
+j
+ython
+ava
+6
+4
+3
+2
+h
+v
+The Final Output is: jythonpava64hv
+please enter a Third string: maths
+please enter a Fourth string: science
+maths
+science
+m
+s
+aths
+cience
+5
+7
+2
+3
+t
+e
+The Final Output is: sathsmcience57te
+
+Task5:
+******
+Collect two strings from user
+
+string1: wikipedia
+string2: typescript
+
+output: p  +  c   ===> ascii value of p + ascii value of c  ====>  198
+(ord , chr)
+
+a = input("please enter a First string: ") #string default
+b = input("please enter a Second string: ")
+print(a)
+print(b)
+a1=a.find('p')
+b1=b.find('c')
+print(a1)
+print(b1)
+print("Find out the value of string1:",a[a1])
+print("Find out the value of string2:",b[b1])
+
+print("The ASCII value of '" + a[a1] + "' is", ord(a[a1]))
+print("The ASCII value of '" + b[b1] + "' is", ord(b[b1]))
+a2=ord(a[a1])
+b2=ord(b[b1])
+
+print(f"Based on the above ASCII value({ord(a[a1])}) of The original value is", chr(ord(a[a1])))
+print(f"Based on the above ASCII value({ord(b[b1])}) of The original value is", chr(ord(b[b1])))
+print("The Total value is:",int(a2+b2))
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\3.py =========================================
+please enter a First string: wikipedia
+please enter a Second string: typescript
+wikipedia
+typescript
+4
+5
+Find out the value of string1: p
+Find out the value of string2: c
+The ASCII value of 'p' is 112
+The ASCII value of 'c' is 99
+Based on the above ASCII value(112) of The original value is p
+Based on the above ASCII value(99) of The original value is c
+The Total value is: 211
+
+
+Task6:
+******
+collect one string from user:
+
+string: computer
+output: c6r
+
+string: mathematics
+output: m9s
+
+
+a = input("please enter a First string: ")
+print(a[0])
+print(a[-1])
+print(len(a[1:-1]))
+b=str(len(a[1:-1]))
+print(a[0]+b+a[-1])
+a = input("please enter a Second string: ")
+print(a[0])
+print(a[-1])
+print(len(a[1:-1]))
+b=str(len(a[1:-1]))
+print(a[0]+b+a[-1])
+
+Output:
+
+================================== RESTART: C:/Siva_OldLaptop/Laptop_E_prompt/NOTES/Python/Task_1_to_Task6_02Feb2022.py =================================
+please enter a First string: computer
+c
+r
+6
+The Final Output is: c6r
+please enter a Second string: mathematics
+m
+s
+9
+The Final Output is: m9s
+
+Task7
+******
+Say hello world with python
+
+my_string="Hello, World"
+print(my_string)
+
+Task 8
+
+swapcase
+
+string="wELCOME tO pYTHON"
+swapStr=string.swapcase()
+swapStr
+
+Task9
+
+what;s your name
+
+firstname=input("Enter your First name:")
+lastname=input("Enter your Last name:")
+print("My name is {0} {1}".format(firstname,lastname))
+
+Task10:
+
+Mutation
+
+
+string="Pytcon"
+l=list(string)
+l[3]="h"
+string="".join(l)
+print(string)
+
+Python
+
+Task11:
+
+Arithmetic operator
+
+a=int(input("a="))
+b=int(input("b="))
+
+a1=a+b
+d1=a-b
+p1=a*b
+print(a1)
+print(d1)
+print(p1)
+
+
+Task12:
+python divison
+
+a=int(input("a="))
+b=int(input("b="))
+intdiv=a//b
+floatdiv=a/b
+print(intdiv)
+print(floatdiv)
+
