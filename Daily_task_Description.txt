@@ -924,9 +924,9 @@ Task 8
 
 swapcase
 
-string="PYThon"
-swapStr=string.swapcase()
-swapStr
+a="PYThon"
+b=a.swapcase()
+print(b)
 
 Task9
 
@@ -974,3 +974,121 @@ fdiv=a/b
 print(idiv)
 print(fdiv)
 
+--------------------------------------02/07/2022----------------------------------------------------------------------------------------
+=======================
+Feb 7
+=======================
+
+List
+
+#Create an empty list (two ways)
+#Concatenate with [5,6,7,8]
+#add 8,9,1,5,6,7,8,1 elements to that list
+#Find frequency of 8 (count)
+#find the mean of the list
+#find sum (List) + min + Max 
+#Find median of the list
+#remove duplicates from list and give output in the format of tuple
+
+Study: https://www.w3schools.com/python/python_ref_list.asp
+
+#Create an empty list (two ways)
+# Creating empty List using []
+sample_list = []
+print('Sample List: ', sample_list)
+# Creating empty List using list constructor
+sample_list = list()
+print('Sample List: ', sample_list)
+#Concatenate with [5,6,7,8]
+sample_list2=[5,6,7,8]
+print("List with elements:",sample_list2)
+sample_list.extend(sample_list2)
+print("After concatination empty list is:",sample_list)
+#add 8,9,1,5,6,7,8,1 elements to that list
+sample_list3= (8,9,1,5,6,7,8,1)
+print("Before concatination sample_list3 is:",sample_list3)
+sample_list.extend(sample_list3)
+print(sample_list)
+#Find frequency of 8 (count)
+frequency=sample_list.count(8)
+print("Frequency of the given value is",frequency)
+#find the mean of the list
+mean=sum(sample_list)/len(sample_list)
+print("Mean of the list is:",mean)
+#find sum (List) + min + Max 
+print("sum of list is:",sum(sample_list))
+print("Minimum element in the list is:",min(sample_list))
+print("Maximum element in the list is:",max(sample_list))
+#Find median of the list
+median=sample_list[(len(sample_list)-1)//2:(len(sample_list)+2)//2]
+print("Median of list is:",median)
+sample_list1 = set(sample_list)
+print("After removing duplicate values:",sample_list1)
+print("Printing output in Tuple format",tuple(sample_list1))
+
+Output:
+
+Sample List:  []
+Sample List:  []
+List with elements: [5, 6, 7, 8]
+After concatination empty list is: [5, 6, 7, 8]
+Before concatination sample_list3 is: (8, 9, 1, 5, 6, 7, 8, 1)
+[5, 6, 7, 8, 8, 9, 1, 5, 6, 7, 8, 1]
+Frequency of the given value is 3
+Mean of the list is: 5.916666666666667
+sum of list is: 71
+Minimum element in the list is: 1
+Maximum element in the list is: 9
+Median of list is: [9, 1]
+After removing duplicate values: {1, 5, 6, 7, 8, 9}
+Printing output in Tuple format (1, 5, 6, 7, 8, 9)
+
+--------------------------------------02/08/2022----------------------------------------------------------------------------------------
+
+=======================
+Feb 8
+=======================
+
+Tuple
+
+#Create two tuples (1,4,5,6,7,8) (5,6,7,8,9)
+#Find the common elements between two tuples
+#Concatenate both tuples and remove duplicates from tuple
+#Find the index value of 9 (after concatenation)
+#multiply above elements 3 times
+
+
+tup1 = (1,4,5,6,7,8)
+tup2 = (5,6,7,8,9)
+
+print(tup1)
+print(tup2)
+tuble3=(tup1 + tup2)
+result = tuple(set(tup1) & set(tup2))
+print("Find the common elements between two tuples::",result)
+print("Concatenate both tuples :::",(tuble3))
+print("Concatenate both tuples and remove duplicates from tuple:::",set(tuble3))
+print("Find the index value of 9 (after concatenation):::",tuble3[9])
+Output = [(x * 3) for x in tuble3]
+print("Multiply by 3 times:::",Output)
+
+output:
+==================================== RESTART: C:/Siva_OldLaptop/Laptop_E_prompt/NOTES/Python/List_Tuple_08Feb2022.py ====================================
+(1, 4, 5, 6, 7, 8)
+(5, 6, 7, 8, 9)
+Find the common elements between two tuples:: (8, 5, 6, 7)
+Concatenate both tuples ::: (1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9)
+Concatenate both tuples and remove duplicates from tuple::: {1, 4, 5, 6, 7, 8, 9}
+Find the index value of 9 (after concatenation)::: 8
+Multiply by 3 times::: [3, 12, 15, 18, 21, 24, 15, 18, 21, 24, 27]
+
+Sets
+
+#Create two empty sets
+#update set1 with 7,8,9,1,2,3,4,5,0
+#update set2 with 4,5,6,0
+#check whether set2 is subset of set1 or no ?
+#check whether both have common elements are no ?
+#remove 8 from set 1 and set 2 ==> find the inferences
+#discard 0 from set1 and set2 
+#find collection of both sets ===> set1 and set2
