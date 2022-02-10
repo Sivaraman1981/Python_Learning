@@ -1083,7 +1083,7 @@ Find the index value of 9 (after concatenation)::: 8
 Multiply by 3 times::: [3, 12, 15, 18, 21, 24, 15, 18, 21, 24, 27]
 
 Sets
-
+****
 #Create two empty sets
 #update set1 with 7,8,9,1,2,3,4,5,0
 #update set2 with 4,5,6,0
@@ -1092,3 +1092,85 @@ Sets
 #remove 8 from set 1 and set 2 ==> find the inferences
 #discard 0 from set1 and set2 
 #find collection of both sets ===> set1 and set2
+
+set1=set()
+set2=set()
+print(set1)
+print(type(set1))
+print(type(set2))
+print(set2)
+set3={7,8,9,1,2,3,4,5,0}
+set1.update(set3)
+set2.update({4,5,6,0})
+print(set1)
+print(set2)
+print("Is set1 is subset of set2:",set1.issubset(set2))
+print("Common elements in two sets are",set1.intersection(set2))
+set1.discard(8)
+set2.discard(8)
+set2.discard(0)
+set1.discard(0)
+print(set1.union(set2))
+
+Output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/5.py =========================================
+set()
+<class 'set'>
+<class 'set'>
+set()
+{0, 1, 2, 3, 4, 5, 7, 8, 9}
+{0, 4, 5, 6}
+
+--------------------------------------02/09/2022----------------------------------------------------------------------------------------
+
+=======================
+Feb 9
+=======================
+
+Dict (Feb 9)
+
+#create a dictionary
+#{1:["english","maths","science"], 2:[10,20,30], 3:["bio-botany","bio-zoology","Algebra"]}
+#Extract "bobtn" from above dictionary
+#Extract "arbeg" from above dictionary
+#print all keys in dictionary and convert it into tuple
+#Find the average of all numbers available under key "2"
+
+
+dict1={1:["english","maths","science"], 2:[10,20,30], 3:["bio-botany","bio-zoology","Algebra"]}
+print(dict1)
+a=dict1[3]
+print("a value is:",a)
+b=a[0]
+print("a value is:",b)
+print("Extract 'bobtn' from above dictionary\n",b[0::2])
+a1=a[2]
+print("a1 value is:",a1)
+print("Extract 'arbeg' from above dictionary\n",a1[-1:1:-1])
+print("print all keys in dictionary and convert it into tuple::",tuple(dict1.keys()))
+dict2_values=(dict1[2])
+print(dict2_values)
+dict2_values=sum(dict1[2])
+print(dict2_values)
+length=len(dict1[2])
+print(length)
+avg_val=dict2_values/length
+print("Find the average of all numbers available under key 2::",int(avg_val))
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\5.py =========================================
+{1: ['english', 'maths', 'science'], 2: [10, 20, 30], 3: ['bio-botany', 'bio-zoology', 'Algebra']}
+a value is: ['bio-botany', 'bio-zoology', 'Algebra']
+a value is: bio-botany
+Extract 'bobtn' from above dictionary
+ bobtn
+a1 value is: Algebra
+Extract 'arbeg' from above dictionary
+ arbeg
+print all keys in dictionary and convert it into tuple:: (1, 2, 3)
+[10, 20, 30]
+60
+3
+Find the average of all numbers available under key 2:: 20
