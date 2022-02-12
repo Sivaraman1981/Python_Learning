@@ -644,10 +644,12 @@ Task2:
 
 string1: ***python***
 string1: **python********
-string: ********python*******
+string: ********java*******
 
 
-output: python  (strip,rstrip,lstrip method *)
+output: python , java (strip,rstrip,lstrip method *)
+
+Method1:
 
 c = input("please enter a string of strip: ") 
 print(c)
@@ -675,6 +677,22 @@ Using strip: python
 Using lstrip: python
 Using rstrip: python
 
+
+Method2:
+
+string1 = input("Enter the first string: ")
+string2 = input("Entrer the second string: ")
+
+string1_a = string1.strip("*")
+print("The entered first string is: ", string1)
+print("String1 after removing the '*' characters: ", string1_a)
+
+string2_a = string2.lstrip("*")
+string2_b = string2_a.rstrip("*")
+
+print("The entered second string is: ", string2)
+print("String2 after removing the '*' characters: ", string2_b)
+
 Task3: (name<space>float)
 *************************
 collect three strings from user  name<space>float
@@ -687,6 +705,8 @@ split + indexing
 
 10.30 + 12.19 + 20.20 ===> output ===> add it 42.69
 
+Method1:
+--------
 a = input("please enter a First string: ") #string default
 b = input("please enter a Second string: ")
 c = input("please enter a Third string: ")
@@ -726,6 +746,31 @@ Gokul 20.20
 20.2
 The total value of above input value is: 42.69
 
+
+Method2:
+--------
+
+a = input("Enter the 1st name and float value")
+b = input("Enter the 2nd name and float value")
+c = input("Enter the 3nd name and float value")
+a1=float(a.split()[1])
+b1=float(b.split()[1])
+c1=float(c.split()[1])
+print(a1+b1+c1)
+
+Method3:
+--------
+string1 = input("Enter the 1st string in the form of 'name float': ")
+string2 = input("Enter the 2nd string in the form of 'name float': ")
+string3 = input("Enter the 3rd string in the form of 'name float': ")
+
+string1_list = string1.split()
+string2_list = string2.split()
+string3_list = string3.split()
+
+total = float(string1_list[1]) + float(string2_list[1]) + float(string3_list[1])
+print("The addition of the float vales in string1, string2 and string3 is : ", total)
+
 Task4:
 ******
 #collect two strings from user
@@ -739,6 +784,32 @@ string1: maths
 string2: science
 
 output ===> sathsmcience57te
+
+Method1:
+********
+str1 = input("Enter the 1st string : ")
+str2 = input("Enter the 2nd string : ")
+
+str1_len = len(str1)
+str2_len = len(str2)
+
+final_str = str2[0] + str1[1:] + str1[0] + str2[1:] + str(str1_len) + str(str2_len)  + str1[int(str1_len/2)] + str2[int(str2_len/2)]
+
+print("The final string is :", final_str)
+
+output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+Enter the 1st string : maths
+Enter the 2nd string : science
+The final string is : sathsmcience57te
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+Enter the 1st string : python
+Enter the 2nd string : java
+The final string is : jythonpava64hv
+
+Method2:
 
 a = input("please enter a First string: ") #string default
 b = input("please enter a Second string: ")
@@ -838,6 +909,28 @@ string2: typescript
 output: p  +  c   ===> ascii value of p + ascii value of c  ====>  198
 (ord , chr)
 
+
+Method1:
+s1 = input("please enter a First string: ") #string default
+s2 = input("please enter a Second string: ")
+mid1=str(s1[(len(s1)//2)])
+mid2=str(s2[(len(s2)//2)])
+
+print(ord(mid1))
+print(ord(mid2))
+print(ord(mid1)+ord(mid2))
+
+output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+please enter a First string: wikipedia
+please enter a Second string: typescript
+112
+99
+211
+
+
+Method2:
 a = input("please enter a First string: ") #string default
 b = input("please enter a Second string: ")
 print(a)
@@ -928,6 +1021,18 @@ a="PYThon"
 b=a.swapcase()
 print(b)
 
+Hacker Rank:
+
+def swap_case(s):
+    b=s.swapcase()
+    return b
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
+
+
 Task9
 
 what's your name
@@ -935,6 +1040,16 @@ what's your name
 firstname=input("Enter your First name:")
 lastname=input("Enter your Last name:")
 print("My name is {0} {1}".format(firstname,lastname))
+
+Hacker Rank:
+
+def print_full_name(first, last):
+    print("Hello {0} {1}! You just delved into python.".format(first,last))
+    
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
 
 Task10:
 
@@ -948,6 +1063,21 @@ string="".join(l)
 print(string)
 
 Python
+
+Hacker Rank:
+
+def mutate_string(string, position, character):
+    list1=list(string)
+    list1[position]=character
+    string="".join(list1)
+    return string
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
+
 
 Task11:
 
@@ -964,6 +1094,20 @@ print(d1)
 print(p1)
 
 
+Hacker Rank:
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    a1=a+b  
+    d1=a-b
+    p1=a*b
+    print(a1)
+    print(d1)
+    print(p1)
+
+
+
 Task12:
 python divison
 
@@ -973,6 +1117,16 @@ idiv=a//b
 fdiv=a/b
 print(idiv)
 print(fdiv)
+
+Hacker Rank:
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    idiv=a//b
+    fdiv=a/b
+    print(idiv)
+    print(fdiv)
 
 --------------------------------------02/07/2022----------------------------------------------------------------------------------------
 =======================
@@ -1174,3 +1328,268 @@ print all keys in dictionary and convert it into tuple:: (1, 2, 3)
 60
 3
 Find the average of all numbers available under key 2:: 20
+
+--------------------------------------02/11/2022----------------------------------------------------------------------------------------
+
+==========================================
+Feb 11
+==========================================
+
+Task1:
+*****
+
+Li1 = [2,3,4,5,[45,56,67,78,[111,222,333,[5555,3333,[10000,50000,"python","computer"],1111,7777,8888],444,555,666,777],89,23,34]]
+
+
+5
+56
+222
+50000
+put
+5555
+7777
+666
+89
+on
+333
+3333
+
+Li1 = [2,3,4,5,[45,56,67,78,[111,222,333,[5555,3333,[10000,50000,"python","computer"],1111,7777,8888],444,555,666,777],89,23,34]]
+print(Li1)
+print(Li1[3])
+print(Li1[4][1])
+print(Li1[4][4][1])
+print(Li1[4][4][3][2][1])
+print(Li1[4][4][3][2][3][3:6])
+print(Li1[4][4][3][0])
+print(Li1[4][4][3][4])
+print(Li1[4][4][6])
+print(Li1[4][5])
+print(Li1[4][4][3][2][2][-2:])
+print(Li1[4][4][2])
+print(Li1[4][4][3][1])
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+[2, 3, 4, 5, [45, 56, 67, 78, [111, 222, 333, [5555, 3333, [10000, 50000, 'python', 'computer'], 1111, 7777, 8888], 444, 555, 666, 777], 89, 23, 34]]
+5
+56
+222
+50000
+put
+5555
+7777
+666
+89
+on
+333
+3333
+
+Task2
+*****
+
+a = [1,2,3,4,[100,101,102,"Computer_science"],200,203]
+
+Extract
+#science
+#Computer
+
+Li1 = [1,2,3,4,[100,101,102,"Computer_science"],200,203]
+print(Li1)
+print(Li1[4])
+a=(Li1[4][3])
+print(a[a.find("_")+1:])
+print(a[0:a.find("_")])
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+[1, 2, 3, 4, [100, 101, 102, 'Computer_science'], 200, 203]
+[100, 101, 102, 'Computer_science']
+science
+Computer
+
+Task3
+*****
+
+a = [1,2,3,4,[101,102,103,[201,202,[999]], 666, 777]]
+
+Extract
+#666
+#201
+#102
+#999
+#777
+
+Li1 = [1,2,3,4,[101,102,103,[201,202,[999]], 666, 777]]
+print(Li1)
+print(Li1[4])
+print(Li1[4][4])
+print(Li1[4][3][0])
+print(Li1[4][1])
+print(Li1[4][3][2])
+print(Li1[4][5])
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+[1, 2, 3, 4, [101, 102, 103, [201, 202, [999]], 666, 777]]
+[101, 102, 103, [201, 202, [999]], 666, 777]
+666
+201
+102
+[999]
+777
+
+Task4:
+*****
+
+Li1 = [2,3,"python","hello",4,5,0]  
+
+Extract
+#ll
+#thon
+
+Li1 = [2,3,"python","hello",4,5,0]  
+print(Li1)
+print(Li1[3][2:4])
+print(Li1[2][2:])
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+[2, 3, 'python', 'hello', 4, 5, 0]
+ll
+thon
+
+
+Task5:
+*****
+Li1 = [1,2,3,4,5,[11,22,33,44,55,[111,222,333,444],6666,7777],7777]
+
+Output Prediction 
+
+print(Li1[5][0])
+print(Li1[5][6])
+print(Li1[5][-2])
+print(Li1[5][7])
+print(Li1[6])
+print(Li1[5][5][1])
+print(Li1[-2][-1])
+print(Li1[-2][2:4])
+
+output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+11
+6666
+6666
+7777
+7777
+222
+7777
+[33, 44]
+
+Task6:
+******
+a = {1: [1,2,3,"python"], 2:{10:"hello",20:"welcome",40: "science"}, 99: {3,4,5,6}, 40:{1:"zoology", 2:"Botany"}}
+
+#output with below values alone from above set
+#py
+#ello
+#en
+#zoo
+#Bot
+
+a = {1: [1,2,3,"python"], 2:{10:"hello",20:"welcome",40: "science"}, 99: {3,4,5,6}, 40:{1:"zoology", 2:"Botany"}}
+print(a)
+print(a[1][3][0:2])
+print(a[2][10][1:])
+print(a[2][40][3:5])
+print(a[40][1][0:3])
+print(a[40][2][0:3])
+
+output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+{1: [1, 2, 3, 'python'], 2: {10: 'hello', 20: 'welcome', 40: 'science'}, 99: {3, 4, 5, 6}, 40: {1: 'zoology', 2: 'Botany'}}
+py
+ello
+en
+zoo
+Bot
+
+Task7:
+******
+Covert below two lists in to a dictionary
+
+[1,2,3,4,5]
+["python","cpp","c","java","php"]
+
+key_list = [1,2,3,4,5]
+value_list = ["python","cpp","c","java","php"]
+
+#Method1
+print(dict(zip(key_list,value_list)))
+
+
+#Method2:
+dict_from_list = {key_list[i]: value_list[i] for i in range(len(key_list))}
+print(dict_from_list)
+
+Output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+{1: 'python', 2: 'cpp', 3: 'c', 4: 'java', 5: 'php'}
+
+
+Task8:
+******
+Covert below set in to a list
+
+{5,4,3,6,2,7,1}
+
+sample_set = {5,4,3,6,2,7,1}
+my_list = list(sample_set)
+print(my_list)
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+
+[1, 2, 3, 4, 5, 6, 7]
+
+Task9:
+******
+Remove duplicates from below list
+
+[5,4,3,6,2,7,1,2,3,4,1,2,3,4,5,6,5]
+
+list1 = [5,4,3,6,2,7,1,2,3,4,1,2,3,4,5,6,5]
+print(list(set(list1)))
+
+output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+{1, 2, 3, 4, 5, 6, 7}
+
+Task10:
+******
+Convert below one to tuple
+
+[5,4,3,6,2,7,1,2,3,4,1,2,3,4,5,6,5]
+
+list1 = [5,4,3,6,2,7,1,2,3,4,1,2,3,4,5,6,5]
+print(tuple(list1))
+
+output:
+
+========================================== RESTART: C:/Users/sivar/AppData/Local/Programs/Python/Python310/1.py =========================================
+(5, 4, 3, 6, 2, 7, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 5)
+
+Pre study:
+
+https://www.w3schools.com/python/gloss_python_if_statement.asp
+https://www.w3schools.com/python/python_conditions.asp
+https://www.w3schools.com/python/python_while_loops.asp
+https://www.w3schools.com/python/python_for_loops.asp
+https://www.w3schools.com/python/python_ref_functions.asp
+https://www.w3schools.com/python/python_functions.asp
+https://www.w3schools.com/python/python_modules.asp
+--------------------------------------02/15/2022----------------------------------------------------------------------------------------
