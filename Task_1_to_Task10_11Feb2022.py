@@ -31,6 +31,12 @@ print(Li1[4])
 a=(Li1[4][3])
 print(a[a.find("_")+1:])
 print(a[0:a.find("_")])
+#Method2:
+a = [1,2,3,4,[100,101,102,"Computer_science"],200,203]
+print(a[4][3][0:8])
+print(a[4][3][9:])
+
+
 print("\nTask2 ended:::\n")
 #Task3
 #Extract the below from a = [1,2,3,4,[101,102,103,[201,202,[999]], 666, 777]]
@@ -46,7 +52,7 @@ print(Li1[4])
 print(Li1[4][4])
 print(Li1[4][3][0])
 print(Li1[4][1])
-print(Li1[4][3][2])
+print(Li1[4][3][2][0])
 print(Li1[4][5])
 print("\nTask3 ended:::\n")
 #Task4
