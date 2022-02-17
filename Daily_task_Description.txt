@@ -1603,6 +1603,7 @@ Feb 15
 #Task1
 
 #hackerrank Write a function
+#Method1:
 
 def is_leap(year):
     leap = False
@@ -1632,6 +1633,22 @@ False
 Expected Output
 False
 
+Method2:
+
+def is_leap(year):
+    if year%4 == 0:
+        if (year%100 != 0 or year%400==0):
+            leap = True
+        else:
+            leap = False
+    else:
+        leap = False
+    return leap
+    
+    
+
+year = int(input())
+print(is_leap(year))
 
 #Task2
 
@@ -1777,3 +1794,274 @@ Enter the Maths mark:50
 50.0
 Grade D
 --------------------------------------02/16/2022----------------------------------------------------------------------------------------
+
+===============================
+Feb 16
+==============================
+
+Task1:
+*****
+#Using Range function  print multiples of 5 from 0 to 75
+#Using Range function  print multiples of 8 from 0 to 72
+
+#Using Range function  print multiples of 5 from 75 to 0
+#Using Range function  print multiples of 8 from 96 to 72
+
+#1
+#Using Range function  print multiples of 5 from 0 to 75
+#Using Range function  print multiples of 8 from 0 to 72
+
+#Using Range function  print multiples of 5 from 75 to 0
+#Using Range function  print multiples of 8 from 96 to 72
+
+print("Task1 is started::")
+for i in range(0,76):
+        print(f"Using Range function  print multiples of 5 from 0 to 75 value is {i}::",i*5)
+        
+for i in range(0,73):
+        print(f"Using Range function  print multiples of 8 from 0 to 72 value is {i}:::",i*8)
+
+print("Task1 is ended::")
+
+print("Task1 is started::")
+for i in range(75,-1,-1):
+        print(f"Using Range function  print multiples of 5 from 75 to 0 value is {i}::",i*5)
+        
+for i in range(96,71,-1):
+        print(f"Using Range function  print multiples of 8 from 96 to 72 value is {i}:::",i*8)
+
+
+print("Task1 is ended::")
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Sample outputs:
+Using Range function  print multiples of 5 from 0 to 75 value is 0:: 0
+Using Range function  print multiples of 5 from 0 to 75 value is 1:: 5
+Using Range function  print multiples of 5 from 0 to 75 value is 2:: 10
+Using Range function  print multiples of 5 from 0 to 75 value is 3:: 15
+
+Using Range function  print multiples of 8 from 0 to 72 value is 0::: 0
+Using Range function  print multiples of 8 from 0 to 72 value is 1::: 8
+Using Range function  print multiples of 8 from 0 to 72 value is 2::: 16
+Using Range function  print multiples of 8 from 0 to 72 value is 3::: 24
+
+Using Range function  print multiples of 5 from 75 to 0 value is 75:: 375
+Using Range function  print multiples of 5 from 75 to 0 value is 74:: 370
+Using Range function  print multiples of 5 from 75 to 0 value is 73:: 365
+Using Range function  print multiples of 5 from 75 to 0 value is 72:: 360
+Using Range function  print multiples of 5 from 75 to 0 value is 71:: 355
+
+Using Range function  print multiples of 8 from 96 to 72 value is 96::: 768
+Using Range function  print multiples of 8 from 96 to 72 value is 95::: 760
+Using Range function  print multiples of 8 from 96 to 72 value is 94::: 752
+Using Range function  print multiples of 8 from 96 to 72 value is 93::: 744
+Using Range function  print multiples of 8 from 96 to 72 value is 92::: 736
+
+Task2:
+*****
+#Get a dynamic list from user
+
+#Task2
+#Get a dynamic list from user
+#clues Task2 and Task3
+#1. get number of elements from user
+#Loop through range
+#append to list/dicti
+
+print("\nTask2 is started::")
+list1=[]
+num=input("Enter the number of elements::")
+for i in range(int(num)):
+        ele = int(input("enter the input value:"))
+        list1.append(ele)       
+print(list1)
+print("Task2 is ended::\n")
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+
+Task2 is started::
+Enter the number of elements::3
+enter the input value:1
+enter the input value:2
+enter the input value:3
+[1, 2, 3]
+Task2 is ended::
+
+Task3:
+******
+
+#Get a dynamic dictionary from user
+#clues Task2 and Task3
+#1. get number of elements from user
+#Loop through range
+#append to list/dicti
+
+print("\nTask3 is started::")
+dict1={}
+num=input("Enter the number of elements::")
+for i in range(int(num)):
+        keys=int(input("enter the key value:"))
+        value=(input("enter the value:"))
+        dict1[keys]=value
+print(dict1)
+print("Task3 is ended::\n")
+
+Output
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+
+Task3 is started::
+Enter the number of elements::3
+enter the key value:3
+enter the value:java
+enter the key value:4
+enter the value:php
+enter the key value:6
+enter the value:python
+{3: 'java', 4: 'php', 6: 'python'}
+Task3 is ended::
+
+Task4:
+******
+
+#Get two integers from user
+#print multiples of 8 between them
+
+#clues:
+#Use range function in for loop
+#Use if condition inside for loop
+#add in to list
+
+#input 10 100
+#multiples of 8
+#[16,24,32.....,96]
+
+print("\nTask4 is started::")
+input1=int(input("enter the first range value::"))
+input2=int(input("enter the second range value::"))
+list1=[]
+for i in range(input1,input2):
+	if i%8==0:
+		print(f'{i}:mulptiples of 8')
+for i in range(input1,input2):
+        if i%8==0:
+                list1.append(i)
+print(list1)
+
+print("\nTask4 is ended::")
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the first range value::10
+enter the second range value::100
+16:mulptiples of 8
+24:mulptiples of 8
+32:mulptiples of 8
+40:mulptiples of 8
+48:mulptiples of 8
+56:mulptiples of 8
+64:mulptiples of 8
+72:mulptiples of 8
+80:mulptiples of 8
+88:mulptiples of 8
+96:mulptiples of 8
+[16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96]
+
+
+Task5:
+*****
+
+Input:
+#Li1 = [3,4,5,2,7,8,9,10]
+
+#Output:
+#Li_odd = [3,5,7,9]
+#Li_even = [4,2,8,10]
+
+print("\nTask5 is started::")
+Li1 = [3,4,5,2,7,8,9,10]
+Li2 = []
+Li3 = []
+
+for i in Li1:
+    if i% 2 == 0:
+        Li2.append(i)
+    else:
+        Li3.append(i)
+        
+print("Even number is::",list(Li2))
+print("Odd number is::",list(Li3))
+print("\nTask5 is ended::")
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Even number is:: [4, 2, 8, 10]
+Odd number is:: [3, 5, 7, 9]
+
+
+Task6:
+******
+#Input: [-1, -7,8,10,20,21,17,28,-3,0,0,]    
+#Output:
+#neg_LI = [-1,-7,-3]
+#pos_LI = []
+#Zeros = []
+
+#Numeber of postivie ele: 6
+#Number nega: 3
+#Number of zeros: 2
+
+print("\nTask6 is started::")
+list1=[-1, -7,8,10,20,21,17,28,-3,0,0,]
+list2=[]
+list3=[]
+list4=[]
+for i in list1:
+        if i>0:
+                list2.append(i)
+        elif i<0:
+                list3.append(i)
+        elif i==0:
+                list4.append(i)
+print("The number of positive value is::",len(list2)," and the values are::",list2)
+print("The number of positive value is::",len(list3)," and the values are::",list3)
+print("The number of positive value is::",len(list4)," and the values are::",list4)
+print("\nTask6 is ended::")
+	 
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+The number of positive value is:: 6  and the values are:: [8, 10, 20, 21, 17, 28]
+The number of positive value is:: 3  and the values are:: [-1, -7, -3]
+The number of positive value is:: 2  and the values are:: [0, 0]
+
+
+Task7:
+
+Study range function and for loop properly
+
+
+print(list(range(5)))
+print(list(range(1,5)))
+print(list(range(5,20)))
+print(list(range(-5,5)))
+print(list(range(10,100,10)))
+print(list(range(10,0,-1)))
+print(list(range(-5,5,3)))
+print(list(range(10,100,5)))
+print(list(range(10,0,-2)))
+
+[0, 1, 2, 3, 4]
+[1, 2, 3, 4]
+[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+[10, 20, 30, 40, 50, 60, 70, 80, 90]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+[-5, -2, 1, 4]
+[10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+[10, 8, 6, 4, 2]
+
+--------------------------------------02/18/2022----------------------------------------------------------------------------------------
