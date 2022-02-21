@@ -1605,44 +1605,13 @@ Feb 15
 #hackerrank Write a function
 #Method1:
 
+#hackerrank Write a function
 def is_leap(year):
-    leap = False
-    
-    if year%4 == 0:
-            if year%100 == 0:
-                if year%400 == 0:
-                    leap = True
-                else:
-                    leap = False
-            else:
-                leap = True
-    else:
-        leap = False
-    
-        return leap
-
-year = int(raw_input())
-print is_leap(year)
-
-Output:
-
-Input (stdin)
-1990
-Your Output (stdout)
-False
-Expected Output
-False
-
-Method2:
-
-def is_leap(year):
-    if year%4 == 0:
-        if (year%100 != 0 or year%400==0):
-            leap = True
-        else:
-            leap = False
-    else:
-        leap = False
+    leap = False;
+    if year%400==0:
+        leap=True;
+    elif year%4==0 and year%100!=0:
+        leap=True;
     return leap
     
     
@@ -2065,3 +2034,247 @@ print(list(range(10,0,-2)))
 [10, 8, 6, 4, 2]
 
 --------------------------------------02/18/2022----------------------------------------------------------------------------------------
+====================
+feb 18
+===================
+
+https://www.w3schools.com/python/python_ref_functions.asp (any 20 functions)
+
+#User Def functions (4)
+Write function to concatenate three strings
+Write a function multiply three different integers and return a int
+Write a function to return middle char of the string
+write a function to return whether middle character is vowel or not 
+
+#User Def functions (4)
+#Write function to concatenate three strings
+
+def concatenatestring(str1, str2, str3):
+    return str1 + str2 + str3
+  
+string1 = input("Enter string 1: ") 
+string2 = input("Enter string 2: ")
+string3 = input("Enter string 3: ")
+
+print(concatenatestring(string1, string2, string3))
+
+output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter string 1: ram
+Enter string 2: siva
+Enter string 3: natarajan
+ramsivanatarajan
+
+#Write a function multiply three different integers and return a int
+
+def concatenatestring(int1, int2, int3):
+    return int(int1 * int2 * int3)
+  
+integer1 = input("Enter Value 1: ") 
+integer2 = input("Enter Value 2: ") 
+integer3 = input("Enter Value 3: ") 
+
+print(concatenatestring(integer1, integer2, integer3))
+
+output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter Value 1: 2
+Enter Value 2: 3
+Enter Value 3: 4
+24
+
+#Write a function to return middle char of the string
+
+def middle_string(str1):
+    middle_len=len(str1)
+    middle_len_pos= middle_len//2
+    return(str1[middle_len_pos])
+
+string1= input("enter the string to find out middle string::")
+print(middle_string(string1))
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the string to find out middle string::sivaraman
+r
+
+#write a function to return whether middle character is vowel or not 
+def middle_string_vowel(str1):
+    middle_len_pos= len(str1)//2
+    middle_value=str1[middle_len_pos]
+    print("middle value is::",middle_value)
+    
+    if ( middle_value in ['a','e','i','o','u','A','E','I','O','U']):
+    	return "The string middle is Vowel" 
+    else:
+    	return "The string middle is not Vowel"
+
+string1= input("enter the string to find out middle string is vowel or not::")
+print(middle_string_vowel(string1))
+
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the string to find out middle string::sivaraman
+middle value is:: r
+The string middle is not Vowel
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the string to find out middle string::sivareaman
+middle value is:: e
+The string middle is Vowel
+
+Advance (7)
+
+1. whether the string is palindrome or not
+2. whether the number is armstrong or not
+3. whether the number is prime or not
+4. Find factorial of a number using function
+5. Find factorial of a number using recursive function
+6. Find factorial of a number without using function
+7. Fibonacci series
+
+#Task1
+#whether the string is palindrome or not
+
+def palindrome_string(str1):
+   reversestr=str1[::-1]
+   if str1 == reversestr:
+       return "Enter string is palindrome"
+   else:
+       return "Enter string is not palindrome"
+
+string1= input("enter the string to find out palindrome or not::")
+print(palindrome_string(string1))
+
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the string to find out palindrome or not::malayalam
+Enter string is palindrome
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+enter the string to find out palindrome or not::sivaraman
+Enter string is not palindrome
+
+#Task2
+#whether the number is armstrong or not
+def armstrong(num1):
+    tlength = len(num1)
+    sumval = 0
+    for i in num1:
+        sumval = sumval + int(i)**tlength
+    
+    if(str(sumval) == num1):
+        print("It is an armstrong number")
+    else:
+        print("It is not an armstrong number")
+    
+num1 = input("Enter a number to check if the number is armstrong or not: ")
+armstrong(num1)
+
+Output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number to check if the number is armstrong or not: 123
+It is not an armstrong number
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number to check if the number is armstrong or not: 1634
+It is an armstrong number
+
+#Task 3
+#whether the number is prime or not
+
+def prime_number(num1):
+    if(num1 == 0 or num1 ==1):
+        print(num1,"Is not a prime number")
+    else:
+        for n in range(2,num1):
+            if num1%n==0:
+                print(num1,"Is not a Prime Number")
+                break
+        else:
+            print(num1,"Is Prime number")
+        
+number1 = int(input("Enter a number to check if its a prime number or not:"))
+prime_number(number1)
+
+Output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number to check if its a prime number or not:3
+3 Is Prime number
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number to check if its a prime number or not:123
+0
+123 Is not a Prime Number
+
+
+#Task4. Find factorial of a number using function
+
+def factorial(num1):
+ 
+    # single line to find factorial
+    return 1 if (num1==1 or num1==0) else num1 * factorial(num1 - 1)
+ 
+ 
+# Driver Code
+number1=int(input("Enter the number::"))
+print ("Factorial of",number1,"is",factorial(number1))
+
+output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number::3
+Factorial of a number is= 6
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number::7
+Factorial of a number is= 5040
+
+#Task5. Find factorial of a number using recursive function
+def factorial(num1):
+    if(num1>1):
+        fact2=num1*factorial(num1-1)
+        return fact2
+    else:
+        return 1    
+
+number1=int(input("Enter a number::"))
+fact1=factorial(number1)
+print("Factorial of a number is=",fact1)
+
+output:
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number::3
+Factorial of a number is= 6
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter a number::7
+Factorial of a number is= 5040
+
+#Task6. Find factorial of a number without using function
+number1 = int(input("Enter the number::"))
+factorial = 1
+
+if number1 < 0 and (number1 == 0 or number1==1):
+   print("The factorial of 0&1 is 1")
+else:
+   for i in range(1,number1 + 1):
+       factorial = factorial*i
+   print("The factorial of",number1,"is",factorial)
+
+output:
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter the number::3
+The factorial of 3 is 6
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+Enter the number::7
+The factorial of 7 is 5040
+
+
+#Task7. Fibonacci series
