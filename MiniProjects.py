@@ -21,13 +21,12 @@ v_user=0
 v_sys=0
 
 for i in range(NoofGames):
-    print(i)
-    
+
 
     User_In = input("Enter the values of rock paper scissor:::")
-    print("User_In::",User_In)
+    print("User Input::",User_In)
     sys_ran = random.choice(Li1)
-    print(sys_ran)
+    print("System Input::",sys_ran)
     
     if User_In =='rock' and (User_In==sys_ran):
         v_tie=v_tie+1
@@ -40,22 +39,24 @@ for i in range(NoofGames):
         print("The game is tie")
     elif User_In =='rock' and sys_ran =='scissor':
         v_user=v_user+1
-        print("User_In::User won the game")
+        print("User won the game")
     elif sys_ran =='rock' and User_In =='scissor':
         v_sys=v_sys+1
-        print("sys_ran::System won the game")
+        print("System won the game")
     elif User_In =='paper' and sys_ran =='scissor':
         v_sys=v_sys+1
-        print("User_In::System won the game")
+        print("System won the game")
     elif sys_ran =='paper' and User_In =='scissor':
         v_user=v_user+1
-        print("User_In::User won the game")
+        print("User won the game")
     elif User_In =='rock' and sys_ran =='paper':
         v_sys=v_sys+1
-        print("sys_ran::System won the game")
+        print("System won the game")
     elif sys_ran =='rock' and User_In =='paper':
         v_user=v_user+1
-        print("User_In::User won the game")
+        print("User won the game")
+    else:
+        print("Invalid Input given by User")
 
 print("\nTotal No of Games::",NoofGames)
 print("System points::",v_sys)
@@ -66,57 +67,49 @@ if v_user > v_sys:
     print("\nUSER wins the game !!! Congrats !!!!")
 elif v_sys > v_user:
     print("\nSYSTEM wins the game !!! Congrats !!!!")
-
-
+elif v_user == v_sys and (v_user>0 and v_sys>0):
+    print("\nUSER & SYSTEM both are wins the game !!! Congrats !!!!")
+elif v_user == 0 and v_sys == 0:
+    print("\nUSER & SYSTEM both are not wins the game !!! Congrats !!!!")
 
 Output:
-========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\1.py =========================================
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
 Enter the number of games do you want to play::3
-0
 Enter the values of rock paper scissor:::rock
-User_In:: rock
-rock
-The game is tie
-1
+User Input:: rock
+System Input:: paper
+System won the game
 Enter the values of rock paper scissor:::paper
-User_In:: paper
-scissor
-User_In::System won the game
-2
+User Input:: paper
+System Input:: rock
+User won the game
 Enter the values of rock paper scissor:::scissor
-User_In:: scissor
-rock
-sys_ran::System won the game
+User Input:: scissor
+System Input:: scissor
+The game is tie
 
 Total No of Games:: 3
-System points:: 2
-User points:: 0
-Total tie points::
- 1
-
-SYSTEM wins the game !!! Congrats !!!!
-
-======================================== RESTART: C:/Siva_OldLaptop/Laptop_E_prompt/NOTES/Python/MiniProjects.py ========================================
-Enter the number of games do you want to play::3
-0
-Enter the values of rock paper scissor:::paper
-User_In:: paper
-paper
-The game is tie
-1
-Enter the values of rock paper scissor:::rock
-User_In:: rock
-scissor
-User_In::User won the game
-2
-Enter the values of rock paper scissor:::scissor
-User_In:: scissor
-paper
-User_In::User won the game
-
-Total No of Games:: 3
-System points:: 0
-User points:: 2
+System points:: 1
+User points:: 1
 Total tie points:: 1
 
-USER wins the game !!! Congrats !!!!
+USER & SYSTEM both are wins the game !!! Congrats !!!!
+
+========================================== RESTART: C:\Users\sivar\AppData\Local\Programs\Python\Python310\2.py =========================================
+Enter the number of games do you want to play::2
+Enter the values of rock paper scissor:::rrrr
+User Input:: rrrr
+System Input:: paper
+Invalid Input given by User
+Enter the values of rock paper scissor:::rock
+User Input:: rock
+System Input:: rock
+The game is tie
+
+Total No of Games:: 2
+System points:: 0
+User points:: 0
+Total tie points:: 1
+
+USER & SYSTEM both are not wins the game !!! Congrats !!!!
