@@ -29,7 +29,23 @@ if user_select == 1:
         print("You have selected the Pop operation in List::")
         pop_elements = int(input("Enter the elements to Pop in List: "))
         list1.pop(pop_elements)
-        print("After append operation, current List::",list1)   
+        print("After Pop operation, current List::",list1)
+        
+    elif list_operation == 3:
+        print("You have selected the Update operation in List::")
+        update_position = int(input("Enter the position to update in List: "))
+        update_elements = int(input("Enter the elements to update in List: "))
+        
+        list1[update_position]=update_elements
+        print("After Update operation, current List::",list1)
+        
+    elif list_operation == 4:
+        print("You have selected the Concatenation operation in List::")
+        Concat_elements = int(input("Enter the No of elements to Concatenation in List: "))
+        for i in range(0,Concat_elements):
+            ele = int(input())
+            list1.append(ele)       
+        print("After Concatenation operation, current List::",list1)  
 
 elif user_select == 2:
     print("You have selected the Tuple data structure and welcome to the Tuble!!")
