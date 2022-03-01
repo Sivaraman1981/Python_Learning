@@ -231,6 +231,72 @@ while True:
 
     elif user_select == 2:
         print("You have selected the Tuple data structure and welcome to the Tuble!!")
+        
+        tuple1 = []
+        tuple2 = []
+        
+        tuple1=tuple(create_list())
+    
+        while True:
+            print("1.Index","\n2.Sum","\n3.Min","\n4.Max","\n5.Length",
+              "\n6.Mean","\n7.Count/Frequency","\n8.Concatenation ","\n9.Exit")
+
+            tuple_operation=int(input("Please select any of the above operations to peform further List process::" ))
+
+
+            if tuple_operation == 1:
+                print("You have selected the Index operation in Tuple::",tuple1)
+                tup_index = tuple1.index(int(input("Enter the element in tuple to display:")))
+                print("After Index of an element in tuple is: ", tup_index)
+
+            elif tuple_operation == 2:
+                print("You have selected the Sum operation in Tuple::",tuple1)
+                tup1sum=sum(tuple1)
+                print("After sum of an element in tuple is: ", tup1sum)
+
+            elif tuple_operation == 3:
+                print("You have selected the Min operation in Tuple::",tuple1)
+                tup1min=min(tuple1)
+                print("After Min of an element in tuple is: ", tup1min)
+
+            elif tuple_operation == 4:
+                print("You have selected the Max operation in Tuple::",tuple1)
+                tup1max=max(tuple1)
+                print("After Max of an element in tuple is: ", tup1max)
+
+            elif tuple_operation == 5:
+                print("You have selected the Length operation in Tuple::",tuple1)
+                print("After Length of an element in tuple is: ", len(tuple1))
+
+            elif tuple_operation == 6:
+                print("You have selected the Mean operation in Tuple::",tuple1)
+                tuple1mean=sum(tuple1)/len(tuple1)
+                print("After Mean of an element in tuple is: ", tuple1mean)
+
+            elif tuple_operation == 7:
+                print("You have selected the Count/Frequency operation in Tuple::",tuple1)
+
+                print("The Count of element occurence is : ", tuple1.count(int(input("Enter the element to find out the count in tup:"))))
+
+            elif tuple_operation == 8:
+                print("You have selected the Concatenation operation in Tuple::",tuple1)
+                list1=[]
+                
+                List1_elements = int(input("Enter the no of elements to concat in tuple:"))
+                for i in range (0,List1_elements):
+                    ele = int(input(f"Enter the {i} Elements to concat into list::"))
+                    list1.append(ele)
+                    
+                tuple2 = tuple(list1)
+                
+                tuple3 = tuple1 + tuple2
+                print("After the Concatenated of tuple is : ",tuple3)
+
+            elif tuple_operation == 9:
+                break
+
+            else:
+                print("You have selected Invalid Operation in Tuple!!")
 
 
     elif user_select == 3:
@@ -289,6 +355,9 @@ while True:
                 
             elif set_operation == 16:
                 break
+            
+            else:
+                print("You have selected Invalid Operation in Set!!")
 
 
     elif user_select == 4:
@@ -329,6 +398,9 @@ while True:
                 
             elif dict_operation == 6:                
                 break
+            else:
+                print("You have selected Invalid Operation in Dictionary!!")
+                
     elif user_select == 5:
         break
 
