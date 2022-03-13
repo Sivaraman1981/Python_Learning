@@ -1,0 +1,44 @@
+{ 
+	"Questions": {
+		"Question1": {
+				"Question":"\n1)What is a correct syntax to output 'Hello World' in Python?",
+					"options":["a)p('Hello World;')","b)print('Hello World')","c)Print('Hello World')","d)None"],"answer":"b"
+					},                    
+		"Question2": {
+				"Question":"\n2)Which one is NOT a legal variable name?",
+                    "options":["a)my-var","b)my_var","c)Myvar","d)_myvar"],"answer":"b"
+					},
+		"Question3": {
+				"Question":"\n3)What is the correct file extension for Python files?",
+                    "options":["a) .py","b) .python","c) .pt","d) .pty"],"answer":"a"
+					 },
+		"Question4": {
+				"Question":"\n4)How do you create a variable with the floating number 2.8?",
+                    "options":['a) x = float(2.8)','b) x = 2.8','c) Both answers are correct'],"answer":"b"
+					},
+		"Question5": {
+				"Question":"\n5)What is the correct way to create a function in Python?",
+                    "options":['a) function myfunction():','b)def Myfunction():','c)create Myfunction'],"answer":"b"
+					},
+		"Question6": {
+				"Question":"\n6)Bitwise _________ gives 1 if either of the bits is 1 and 0 when both of the bits are 1",
+                    "options":["a) OR ","b)AND ", "c) XOR ","d)NOT"],"answer":"a"
+					},
+		"Question7": {
+				"Question":"\n7)What will be the output of the following Python expression?  4^12 ",
+                    "options":["a) 2 ","b)4 ", "c) 8 ","d)12"],"answer":"c"
+					},
+		"Question8": {
+				"Question":"\n8)What will be the output of the following Python expression?   ~100?  ",
+                    "options":["a)101 ","b)-101  ", "c) 100 ","d)-100"],"answer":"b"
+					},
+		"Question9": {
+				"Question":"\n9)The one’s complement of 110010101 is: ?  ",
+                    "options":["a)001101010 ","b)110010101  ", "c)001101011","d) 110010100"],"answer":"a"
+					},
+		"Question10": {
+				"Question":"\n10)What will be the value of the following Python expression?   bin(10-2)+bin(12^4)",
+                    "options":["a)0b10000 ","b) 0b10001000  ", "c)0b1000b1000","d)0b10000b1000"],"answer":"c"
+					}
+				}
+}
